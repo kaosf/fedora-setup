@@ -15,3 +15,5 @@ sudo yum groupinstall development-tools
 sudo yum install gcc-c++
 
 sudo yum install samba-client
+
+sudo yum install python3
