@@ -1,4 +1,4 @@
-sudo yum install vim emacs zsh tmux git tig
+sudo yum install vim emacs zsh tmux git tig mercurial
 echo "/usr/bin/zsh" | sudo tee -a /etc/shells
 chsh -s /usr/bin/zsh
 
