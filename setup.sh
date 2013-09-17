@@ -16,4 +16,4 @@ sudo yum install gcc-c++
 
 sudo yum install samba-client
 
-sudo yum install python3
+sudo yum install python3 python-pip
