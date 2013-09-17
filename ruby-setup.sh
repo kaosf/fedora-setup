@@ -12,3 +12,15 @@ rbenv install 2.0.0-p247
 rbenv global 2.0.0-p247
 gem install bundler --no-ri --no-rdoc
 rbenv rehash
+
+# to install nokogiri
+sudo yum install libxml2-devel libxslt-devel
+gem install nokogiri --no-ri --no-rdoc
+
+# to install sqlite3
+sudo yum install libsqlite3x-devel
+gem install sqlite3 --no-ri --no-rdoc
+
+# to install pg
+sudo yum install postgresql-devel
+gem install pg --no-ri --no-rdoc
