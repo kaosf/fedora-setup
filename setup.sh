@@ -17,3 +17,6 @@ sudo yum install gcc-c++
 sudo yum install samba-client
 
 sudo yum install python3 python-pip
+
+# for java and javac
+sudo yum install -y java-1.7.0-openjdk java-1.7.0-openjdk-devel
