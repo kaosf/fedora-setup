@@ -2,8 +2,6 @@ sudo yum install vim emacs zsh tmux git tig mercurial
 echo "/usr/bin/zsh" | sudo tee -a /etc/shells
 chsh -s /usr/bin/zsh
 
-sudo yum install ibus-mozc
-
 touch $HOME/.zshenv && chmod 600 $HOME/.zshenv
 
 # for local install
