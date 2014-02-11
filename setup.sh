@@ -20,3 +20,6 @@ sudo yum install python3 python-pip
 sudo yum install -y java-1.7.0-openjdk java-1.7.0-openjdk-devel
 
 sudo yum install -y w3m colordiff
+
+# for Haskell
+sudo yum install -y haskell-platform
