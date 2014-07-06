@@ -20,9 +20,7 @@ sudo yum install libXpm-devel
   --prefix=$HOME/local \
   --with-features=huge \
   --with-x \
-  --enable-gui=auto \
-  --enable-gtk2-check \
-  --enable-gnome-check \
+  --enable-gui=gtk2 \
   --enable-rubyinterp=yes \
   --enable-luainterp=yes \
   --enable-fail-if-missing
