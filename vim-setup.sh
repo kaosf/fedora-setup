@@ -2,37 +2,27 @@
 #   http://www.vim.org/mercurial.php
 #   http://vim-jp.org/docs/build_linux.html
 
+mkdir -p $HOME/local/src
 cd $HOME/local/src
 hg clone https://vim.googlecode.com/hg/ vim
+hg up v7-4-355
 cd vim
 
-./configure \
-  --prefix=$HOME/local \
-  --with-features=huge \
-  --enable-gui=no \
-  --enable-perlinterp \
-  --enable-pythoninterp \
-  --with-python-config-dir=/usr/lib64/python2.7/config \
-  --enable-python3interp \
-  --with-python3-config-dir=/usr/lib64/python3.3/config-3.3m \
-  --enable-rubyinterp \
-  --enable-fail-if-missing
-#=>
-# checking if compile and link flags for Python are sane... no: PYTHON DISABLED
-# configure: error: could not configure python
+sudo yum install lua-devel
+sudo yum install libXtst-devel
+sudo yum install gtk2-devel
+# ref. http://rpmfind.net/linux/rpm2html/search.php?query=xmkmf
+sudo yum install imake
+# ref. http://qiita.com/akase244/items/1683a2d3ec68df1a26e8
+sudo yum install libXpm-devel
 
 ./configure \
   --prefix=$HOME/local \
   --with-features=huge \
-  --enable-gui=no \
-  --enable-perlinterp \
-  --enable-rubyinterp \
+  --with-x \
+  --enable-gui=gtk2 \
+  --enable-rubyinterp=yes \
+  --enable-luainterp=yes \
   --enable-fail-if-missing
-
 make
-#=>
-# /usr/bin/perl /usr/share/perl5/ExtUtils/xsubpp -prototypes -typemap \
-#     /usr/share/perl5/ExtUtils/typemap if_perl.xs >> auto/if_perl.c
-# gcc -c -I. -Iproto -DHAVE_CONFIG_H   -I/usr/local/include  -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1        -o objects/if_perl.o auto/if_perl.c
-# if_perl.xs:28:20: 致命的エラー: EXTERN.h: そのようなファイルやディレクトリはありません
-#  #include <EXTERN.h>
+make install
