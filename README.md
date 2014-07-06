@@ -3,6 +3,7 @@
 This memo is for Fedora version
 
 * 19
+* 20
 
 ## License
 
