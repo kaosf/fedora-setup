@@ -10,6 +10,7 @@ mkdir -p $HOME/local/bin
 echo 'export PATH=$HOME/local/bin:$PATH' >> $HOME/.zshenv
 
 sudo yum groupinstall development-tools
+sudo yum groupinstall 'Development Tools'
 sudo yum install gcc-c++
 
 sudo yum install samba-client
