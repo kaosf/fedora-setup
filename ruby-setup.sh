@@ -5,6 +5,8 @@ sudo yum install openssl-devel zlib-devel readline-devel
 git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $HOME/.zshenv
 echo 'eval "$(rbenv init -)"' >> $HOME/.zshenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $HOME/.bash_profile
+echo 'eval "$(rbenv init -)"' >> $HOME/.bash_profile
 exec $SHELL -l
 mkdir -p $HOME/.rbenv/plugins
 git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
